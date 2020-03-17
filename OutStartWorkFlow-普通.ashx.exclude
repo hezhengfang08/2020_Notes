@@ -1,0 +1,25 @@
+﻿function startFlow()
+{
+
+var param = {"workflowCode":"CSDDJE","userCode":"Administrator", "objStr":'{JSSJ:"2020-12-05"}'};
+
+$.ajax({
+asnc: false,
+  type: "POST",
+  url:"/Portal/ashx/OutStartWorkFlow.ashx",
+  data: param,
+  dataType: 'json',
+  success:function(rest)
+  {
+	  alert(rest.responseText);
+  },
+  
+ error:function(rest)
+  {
+	   alert(rest.responseText);
+  }
+});
+
+
+
+}
